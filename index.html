@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- import Aframe inside the project -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <title>Hello World!</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-scene>
+        <a-box color="blue" depth="1" height="1" width="1" position="0 0 -4">
+        </a-box>
+      </a-scene>
+      <a-circle color="red" radius="1" position=""
+    </a-scene>
+    <!-- include the Glitch button to show what the webpage is about and to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <!--
       This is the page head - it contains info the browser uses to display the page
       You won't see what's in the head in the page
@@ -76,7 +101,7 @@
             more info and next steps you can take!
           </p>
           <!-- ADD BUTTON HERE -->
-          
+
           <!-- Once you've added the button from the readme, click it in the page -->
           <!-- Check out the function in script.js to see how it works -->
         </div>
