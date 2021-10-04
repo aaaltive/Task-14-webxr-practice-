@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
   </head>
   <body>
     <script>
@@ -11,13 +12,9 @@
       });
     </script>
     <a-scene>
-      <a-assets>
-        <img
-          id="i2"
-          src="https://cdn.glitch.com/62ca0f4b-d94c-42c8-83a1-b6261a4dad3c%2Feso0932a.jpg?v=1633223265212"
-        />
-      </a-assets>
-      <a-sky src="#i2"></a-sky>
+      <a-light color="white" position="0 0 0" type="point" intensity=".5"></a-light>
+      <a-camera cursor position="0 0 0"></a-camera>
+      <a-sky src="https://cdn.glitch.com/62ca0f4b-d94c-42c8-83a1-b6261a4dad3c%2Feso0932a.jpg?v=1633223265212"></a-sky>
       <a-text
         value="Psyche"
         position="-2 2 -4"
@@ -25,28 +22,21 @@
         width="5"
         color="red"
       ></a-text>
-
-      <a-entity foo="bar: 5; baz: bazValue"></a-entity>
-      <a-scene>
-        <!--         <a-box
-          color="blue"
-          depth="1"
-          height="1"
-          width="1"
-          rotation="0 45 0"
-          position="0 0 -4"
-        >
-        </a-box>
-        <a-box color="blue" depth="1" height="1" width="1" position="1 -1.5 -4">
-        </a-box>
-        <a-sphere color="red" radius="1" position="0 2 -4"></a-sphere> -->
+      <a-entity id="orbiter">
         <a-gltf-model
-          id="scene"
+          id="orbiter model"
           position="0 0 -3"
-          rotation="0 50 0"
+          rotation="0 0 0"
           src="https://cdn.glitch.com/62ca0f4b-d94c-42c8-83a1-b6261a4dad3c%2Fscene.glb?v=1633061013402"
         ></a-gltf-model>
-      </a-scene>
+        <a-animation
+          attribute="rotation"
+          to="0 360 0"
+          dur="2000"
+          easing="linear"
+          repeat="indefinite"
+        ></a-animation>
+      </a-entity>
     </a-scene>
     <!-- include the Glitch button to show what the webpage is about and to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
