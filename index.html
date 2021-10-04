@@ -12,9 +12,16 @@
       });
     </script>
     <a-scene>
-      <a-light color="white" position="0 0 0" type="point" intensity=".5"></a-light>
+      <a-light
+        color="white"
+        position="0 0 0"
+        type="point"
+        intensity=".5"
+      ></a-light>
       <a-camera cursor position="0 0 0"></a-camera>
-      <a-sky src="https://cdn.glitch.com/62ca0f4b-d94c-42c8-83a1-b6261a4dad3c%2Feso0932a.jpg?v=1633223265212"></a-sky>
+      <a-sky
+        src="https://cdn.glitch.com/62ca0f4b-d94c-42c8-83a1-b6261a4dad3c%2Feso0932a.jpg?v=1633223265212"
+      ></a-sky>
       <a-text
         value="Psyche"
         position="-2 2 -4"
@@ -26,16 +33,16 @@
         <a-gltf-model
           id="orbiter model"
           position="0 0 -3"
-          rotation="0 0 0"
+          rotation="0 50 0"
           src="https://cdn.glitch.com/62ca0f4b-d94c-42c8-83a1-b6261a4dad3c%2Fscene.glb?v=1633061013402"
+          ><a-animation
+            attribute="rotation"
+            to="0 360 0"
+            dur="12000"
+            easing="linear"
+            repeat="indefinite"
+          ></a-animation
         ></a-gltf-model>
-        <a-animation
-          attribute="rotation"
-          to="0 360 0"
-          dur="2000"
-          easing="linear"
-          repeat="indefinite"
-        ></a-animation>
       </a-entity>
     </a-scene>
     <!-- include the Glitch button to show what the webpage is about and to make it easier for folks to view source and remix -->
